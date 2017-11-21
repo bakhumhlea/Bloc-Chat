@@ -1,1 +1,10 @@
-<h1>Home Page</h1>
+<header class="bloc-chat-header">
+  <h1>Bloc Chat</h1>
+</header>
+
+<section class="list-chat-room">
+  <h2>Chat*</h2>
+  <a ui-sref="url" class="chat-room" ng-repeat="room in home.rooms">
+    {{room.$value}}
+  </a>
+</section>
