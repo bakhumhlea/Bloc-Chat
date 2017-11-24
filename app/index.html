@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
+
     <ui-view></ui-view>
 
 
@@ -32,11 +35,13 @@
     };
     firebase.initializeApp(config);
     </script>
+    <!-- AngularUI Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
 
     <!-- Application Files -->
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
-    <script src="/scripts/controllers/RoomCtrl.js"></script>
     <script src="/scripts/factories/room.js"></script>
+    <script src="/scripts/factories/newRoom.js"></script>
 </body>
 </html>

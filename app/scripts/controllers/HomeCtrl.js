@@ -1,9 +1,10 @@
 (function() {
-    function HomeCtrl(Room) {
-      this.rooms = Room.all;
+    function HomeCtrl(Room , newRoom, $uibModal) {
+      this.rooms = Room;
+      this.newRoom = newRoom;
     }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl',['Room', HomeCtrl]);
+        .controller('HomeCtrl',['Room','newRoom','$uibModal', HomeCtrl]);
 })();
