@@ -1,11 +1,11 @@
 (function(){
   function newRoom(){
     var newRoom = {};
-    newRoom.$value = 'Room name';
+    newRoom.$value = 'Enter your room name!';
     return newRoom;
   }
 
   angular
     .module('blocChat')
-    .factory('newRoom',newRoom);
+    .service('newRoom',newRoom);
 })();

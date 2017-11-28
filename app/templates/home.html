@@ -1,22 +1,25 @@
-<header class="bloc-chat-header">
-  <h1>Bloc Chat</h1>
-</header>
-
 <section class="list-chat-room">
+  <script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-demo">
+      <form name="newRoomForm">
+        <div class="modal-header">
+            <h3 class="modal-title" id="modal-title">Create Room</h3>
+        </div>
+        <div class="modal-body" id="modal-body">
+          <input type="text" class="form-control" ng-model="$ctrl.newRoom.$value"/>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save</button>
+          <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </script>
   <div class="add-room-button">
     <h2>Chat List*</h2>
-    <button type="button" class="chat-btn" ng-click="home.rooms.creatNewRoom()"><i class="ion-android-chat"></i></button>
+    <button type="button" class="chat-btn" ng-click="home.open('sm')"><i class="ion-android-chat"></i></button>
   </div>
   <div class="chat-room" ng-repeat="room in home.rooms.list">
     {{room.$value}}
   </div>
 </section>
-<div class="newRoom-form" ng-show="home.rooms.newRoomForm">
-  <form name="newRoomForm">
-    <input type="text" class="form-control" ng-model="home.newRoom.$value"/></br>
-    <div class="button-group">
-      <button type="button" class="btn btn-default" ng-click="home.rooms.add(home.newRoom.$value)"/>Save</button>
-      <button type="button" class="btn btn-default" ng-click="home.rooms.newRoomForm = false">Cancel</button>
-    </div>
-  </form>
-</div>
