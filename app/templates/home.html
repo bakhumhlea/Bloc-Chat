@@ -1,25 +1,32 @@
-<section class="list-chat-room">
-  <script type="text/ng-template" id="myModalContent.html">
-    <div class="modal-demo">
-      <form name="newRoomForm">
-        <div class="modal-header">
-            <h3 class="modal-title" id="modal-title">Create Room</h3>
-        </div>
-        <div class="modal-body" id="modal-body">
-          <input type="text" class="form-control" ng-model="$ctrl.newRoom.$value"/>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save</button>
-          <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </script>
-  <div class="add-room-button">
-    <h2>Chat List*</h2>
-    <button type="button" class="chat-btn" ng-click="home.open('sm')"><i class="ion-android-chat"></i></button>
+<script type="text/ng-template" id="myModalContent.html">
+  <div class="modal-demo">
+    <form name="newRoomForm">
+      <div class="modal-header">
+          <h3 class="modal-title" id="modal-title">Create Room</h3>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <input type="text" class="form-control" ng-model="$ctrl.newRoom.$value"/>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+      </div>
+    </form>
   </div>
-  <div class="chat-room" ng-repeat="room in home.rooms.list">
-    {{room.$value}}
+</script>
+
+<section class="list-chat-room">
+  <div class="nav-catagories">
+    <h2>User</h2>
+    <div class="list-group-item list-group-item-action">God_Zlatan10</div>
+  </div>
+  <div class="nav-catagories">
+    <h2>Chat Room</h2>
+    <button type="button" class="chat-btn" title="New Chat Room" ng-click="home.open('sm')"><span class="ion-android-chat"></span></button>
+    <div class="list-group-item list-group-item-action" ng-repeat="room in home.rooms.list" ng-click="home.messages.openChatRoom(room)" title="{{room.$value}}">
+      {{room.$value}}
+    </div>
   </div>
 </section>
+
+<message-list>No Chat Data :(</message-list>

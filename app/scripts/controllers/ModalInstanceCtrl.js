@@ -7,10 +7,11 @@
     $ctrl.ok = function () {
       $uibModalInstance.close($ctrl.room.add(newRoom));
       $ctrl.newRoom.$value = 'Enter your room name!';
+
     };
 
     $ctrl.cancel = function () {
-      $uibModalInstance.dismiss('cancel');
+      $uibModalInstance.close('cancel');
     };
   };
 

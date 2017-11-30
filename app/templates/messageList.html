@@ -1,0 +1,11 @@
+<section class="list-message">
+  <div class="list-group">
+    <div class="list-group-item list-group-item-action" ng-repeat="message in home.messages.list">
+      <div class="message-detail">
+        <h5>{{message.userId}}</h5>
+        <p class="lastest-message">{{message.message}}</p>
+        <p class="time-stamp">{{message.timeSent}}</p>
+      </div>
+    </div>
+  </div>
+</section>

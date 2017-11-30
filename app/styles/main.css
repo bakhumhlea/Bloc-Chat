@@ -1,6 +1,9 @@
 body {
   font-size: 16px;
-  font-family: 'Open Sans', lato;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Oxygen', sans-serif;
+  font-family: 'Lobster', cursive;
+  font-family: 'Quicksand', sans-serif;
   color: black;
   height: 100%;
   box-sizing: border-box;
@@ -14,85 +17,106 @@ a {
 }
 .bloc-chat-header {
   width: 100%;
-  height: 8%;
-  background-color: #1A5276;
+  height: 30px;
+  background-color: #061c38;
   color: white;
   margin-top: 0;
 }
-.bloc-chat-header h1 {
-  position: relative;
-  left: 0.8rem;
-  width: 30%;
+.bloc-chat-header .logo {
+  width: 20%;
+  height: 30px;
   box-sizing: content-box;
-  padding-top: 8px;
-  margin-top: 0px;
-  margin-bottom: 1rem;
-  font-size: 3rem;
+  padding: 0;
+}
+.bloc-chat-header .logo h1 {
+  position: relative;
+  width: 100px;
+  height: 30px;
+  box-sizing: border-box;
+  padding-top: 5px;
+  margin: auto;
+  font-family: 'Lobster', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
 }
 section.list-chat-room {
   display: block;
-  width: 22%;
+  width: 20%;
   height: 100%;
-  margin-bottom: 0;
   color: white;
+  font-family: 'Oxygen', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  background-color: #17202A;
-  box-shadow: -2px 0px 5px 2px #17202A inset;
+  background-color: #17202a;
+
+  position: fixed;
+  top: 30px;
+  bottom: 0;
 }
-section.list-chat-room div.add-room-button {
-  background-color: #17202A;
+section.list-chat-room div.nav-catagories {
+  background-color: #172020;
+  border-top: 1px solid #c32828;
 }
-section.list-chat-room h2 {
+section.list-chat-room .nav-catagories h2 {
   display: inline-block;
   position: relative;
-  left: 0.8rem;
   width: 70%;
-  margin-top: 0;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
-  margin-bottom: 0;
+  height: 20px;
+  padding-left: 1rem;
+  margin: 6px auto auto auto;
+  font-size: 1.4rem;
   font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
 }
-section.list-chat-room  .chat-btn {
+section.list-chat-room .nav-catagories .chat-btn {
   display: block;
   float: right;
   cursor: pointer;
-  width: 2.0rem;
-  height: 2.0rem;
-  margin-top: 0.45rem;
-  padding-top: 0.1rem;
+  width: 20px;
+  height: 16px;
+  margin-top: 0.6rem;
   margin-right: 0.8rem;
-  color: white;
+  color: #FFC107;
   background-color: #17202A;
-  border: 2px solid white;
-  border-radius: 50%;
+  border: 1px solid #FFC107;
+  border-radius: 5px;
   font-weight: 100px;
-  font-size: 1.2rem;
+  font-size: 10px;
   text-align: center;
   opacity: 0.7;
   outline: none;
+}
+section.list-chat-room .nav-catagories .chat-btn .ion-android-chat {
+  left: 0;
 }
 section.list-chat-room .chat-btn:hover {
   -webkit-transform: scale(1.1,1.1);
   transition: 0.1s 0.1s all ease;
   opacity: 1.0;
 }
-div.chat-room {
+section.list-chat-room .nav-catagories .list-group-item {
   display: block;
   text-transform: capitalize;
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 0.8rem;
   box-sizing: border-box;
   width: 100%;
-  height: 2.8rem;
+  height: 2.4rem;
+  color: white;
+  border: none;
+  background-color: #17202A;
+
   padding-top: 0.5rem;
-  padding-left: 1.2rem;
+  padding-left: 1rem;
   text-align: justify;
+  transition-timing-function: ease;
+  transition-duration: 0.1s;
 }
-div.chat-room:hover{
+section.list-chat-room .nav-catagories .list-group-item:hover {
   background-color: #273746;
   box-sizing: border-box;
   cursor: pointer;
+  color: #F4F6F7;
 }
 div.newRoom-form {
   width: 22%;

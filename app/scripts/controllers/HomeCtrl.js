@@ -1,8 +1,9 @@
 (function() {
-    function HomeCtrl(Room , newRoom, $uibModal) {
+    function HomeCtrl(Room , newRoom, messages, $uibModal, $log) {
       var $ctrl = this;
       $ctrl.rooms = Room;
       $ctrl.newRoom = newRoom;
+      $ctrl.messages = messages;
 
       $ctrl.animationsEnabled = true;
       $ctrl.item = $ctrl.newRoom.$value;
@@ -40,5 +41,5 @@
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl',['Room','newRoom','$uibModal', HomeCtrl]);
+        .controller('HomeCtrl',['Room','newRoom','messages','$uibModal','$log', HomeCtrl]);
 })();

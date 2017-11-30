@@ -1,0 +1,36 @@
+section.list-message {
+  background-color: #091019;
+}
+div.list-group {
+  display: block;
+  position: fixed;
+  width: 80%;
+  background-color: #091019;
+  box-sizing: border-box;
+  top: 30px;
+  bottom: 0px;
+  right: 0;
+  margin-bottom: 0;
+  font-size: 0.6em;
+}
+div.list-group .list-group-item {
+  padding-left: 10px;
+}
+div.list-group .message-detail {
+  display: inline;
+  width: 75%;
+  box-sizing: border-box;
+}
+div.list-group h5 {
+  margin: 0 0 4px 0;
+  font-size: 1.2em;
+}
+div.list-group p {
+  display: inline;
+}
+div.list-group .time-stamp {
+  display: inline;
+  float: right;
+
+  font-style: italic;
+}
