@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis|Lobster|Oxygen|Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/messageDisplay.css">
+    <link rel="stylesheet" href="/styles/modalWindow.css">
 </head>
 <body>
   <header class="bloc-chat-header">
@@ -21,6 +22,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 
     <!-- FireBase -->
@@ -48,10 +50,14 @@
     <!-- Application Files -->
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/controllers/UserCtrl.js"></script>
     <script src="/scripts/controllers/ModalInstanceCtrl.js"></script>
     <script src="/scripts/factories/room.js"></script>
     <script src="/scripts/factories/newRoom.js"></script>
     <script src="/scripts/factories/messages.js"></script>
+    <script src="/scripts/factories/userProfile.js"></script>
+    <script src="/scripts/factories/loginModal.js"></script>
     <script src="/scripts/directives/messageList.js"></script>
+    <script src="/scripts/run/promptsUsername.js"></script>
 </body>
 </html>

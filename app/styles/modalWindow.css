@@ -1,0 +1,59 @@
+.modal-login {
+border-radius: 2px;
+}
+.modal-header {
+  padding: 8px 0 8px 0;
+}
+.modal-login .logo {
+  padding: 0 2px 0 2px;
+  margin: 0;
+  font-family: 'Lobster', sans-serif;
+  font-size: 2.0rem;
+  font-style: normal;
+  text-align: right;
+}
+.modal-login .modal-title {
+  height: 22px;
+  padding-left: 1px;
+  font-size: 1.6rem;
+  font-weight: bolder;
+  font-style: italic;
+}
+.modal-login .modal-body {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.modal-login .modal-body h5 {
+  font-size: 0.8rem;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.modal-login .form-control {
+  height: 24px;
+  font-size: 1rem;
+  text-align: left;
+  padding: 6px 4px 6px 4px;
+}
+.modal-login .required-info {
+  font-size: 0.8rem;
+  padding: 4px 15px 4px 15px;
+  color: #FF5733;
+}
+.modal-login .modal-footer {
+  padding-top: 14px;
+  padding-bottom: 12px;
+  border-top: none;
+}
+.modal-login .modal-footer .btn-primary {
+  height: 30px;
+  width: 90px;
+  padding: 2px 6px 2px 6px;
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: #ef7e7e;
+  margin: 0 auto 0 auto;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #921212;
+}

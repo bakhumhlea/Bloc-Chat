@@ -18,7 +18,12 @@
 <section class="list-chat-room">
   <div class="nav-catagories">
     <h2>User</h2>
-    <div class="list-group-item list-group-item-action">God_Zlatan10</div>
+    <div class="user-profile">
+      <div class="avartar-img" style="background-image: url({{home.userProfile.currentUserName(username).avartar}});"></div>
+      <span>
+        {{home.userProfile.currentUserName(username).username}}
+      </span>
+    </div>
   </div>
   <div class="nav-catagories">
     <h2>Chat Room</h2>
@@ -26,6 +31,11 @@
     <div class="list-group-item list-group-item-action" ng-repeat="room in home.rooms.list" ng-click="home.messages.openChatRoom(room)" title="{{room.$value}}">
       {{room.$value}}
     </div>
+  </div>
+</section>
+<section class="user-config">
+  <div class="log-out">
+    <button type="button" class="log-out-button" title="Log Out from {{home.userProfile.currentUserName(username).username}}" ng-click="home.logOut()">Log Out</button>
   </div>
 </section>
 

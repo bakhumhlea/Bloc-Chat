@@ -1,9 +1,11 @@
 (function() {
-    function HomeCtrl(Room , newRoom, messages, $uibModal, $log) {
+    function HomeCtrl(Room , newRoom, messages,userProfile,loginModal, $uibModal, $log) {
       var $ctrl = this;
       $ctrl.rooms = Room;
       $ctrl.newRoom = newRoom;
       $ctrl.messages = messages;
+      $ctrl.userProfile = userProfile;
+      $ctrl.loginInitialize = loginModal;
 
       $ctrl.animationsEnabled = true;
       $ctrl.item = $ctrl.newRoom.$value;
@@ -34,12 +36,17 @@
         });
       };
 
-      $ctrl.toggleAnimation = function () {
-        $ctrl.animationsEnabled = !$ctrl.animationsEnabled;
+      $ctrl.logOut = function() {
+        $ctrl.userProfile.logOut();
+        $ctrl.loginInitialize.open();
+        $ctrl.userProfile.username = null;
+        $ctrl.userProfile.first = null;
+        $ctrl.userProfile.last = null;
+        $ctrl.userProfile.avartar = null;
       };
     };
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl',['Room','newRoom','messages','$uibModal','$log', HomeCtrl]);
+        .controller('HomeCtrl',['Room','newRoom','messages','userProfile','loginModal','$uibModal','$log', HomeCtrl]);
 })();

@@ -18,15 +18,16 @@ a {
 .bloc-chat-header {
   width: 100%;
   height: 30px;
-  background-color: #061c38;
+  background-color: #101823;
   color: white;
   margin-top: 0;
 }
 .bloc-chat-header .logo {
-  width: 20%;
+  width: 130px;
   height: 30px;
   box-sizing: content-box;
   padding: 0;
+  border-right: 1px solid #070a0e;
 }
 .bloc-chat-header .logo h1 {
   position: relative;
@@ -41,7 +42,7 @@ a {
 }
 section.list-chat-room {
   display: block;
-  width: 20%;
+  width: 130px;
   height: 100%;
   color: white;
   font-family: 'Oxygen', sans-serif;
@@ -60,13 +61,42 @@ section.list-chat-room div.nav-catagories {
 section.list-chat-room .nav-catagories h2 {
   display: inline-block;
   position: relative;
-  width: 70%;
+  width: 65%;
   height: 20px;
   padding-left: 1rem;
   margin: 6px auto auto auto;
   font-size: 1.4rem;
   font-weight: 400;
   font-family: 'Quicksand', sans-serif;
+}
+section.list-chat-room .nav-catagories .user-profile {
+  height: 60px;
+  width: 100%;
+  padding-top: 10px;
+  background-color: #17202a;
+}
+section.list-chat-room .nav-catagories .user-profile .avartar-img {
+  display: inline-block;
+  width : 40px;
+  height: 40px;
+  box-sizing: border-box;
+  background-color: #091019;
+  margin: 0 2px 0 10px;
+  border-radius: 50%;
+  border: 1px solid #c32828;
+  background-size: cover;
+  background-image: url(http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/857/full/tileable-classic-nebula-space-patterns-6.jpg);
+}
+section.list-chat-room .nav-catagories .user-profile span {
+  display: inline-block;
+  float: right;
+  width: 75px;
+  height: 28px;
+  padding-top: 9px;
+  padding-right: 2px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  font-family: 'Oxygen', sans-serif;
 }
 section.list-chat-room .nav-catagories .chat-btn {
   display: block;
@@ -105,10 +135,13 @@ section.list-chat-room .nav-catagories .list-group-item {
   color: white;
   border: none;
   background-color: #17202A;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
-  padding-top: 0.5rem;
+  padding-top: 0.6rem;
   padding-left: 1rem;
-  text-align: justify;
+
   transition-timing-function: ease;
   transition-duration: 0.1s;
 }
@@ -150,4 +183,32 @@ div.button-group .btn {
 
 .modal-footer button {
   width: 50%;
+}
+section.user-config {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 130px;
+  height: 40px;
+  background-color: #172020;
+  border-top: 1px solid #FFC107;
+}
+section.user-config .log-out {
+  margin: 0 auto 0 auto;
+  height: 40px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+}
+section.user-config .log-out .log-out-button {
+  display: block;
+  width: 80%;
+  height: 20px;
+  margin: 10px auto 0 auto;
+  border-radius: 10px;
+  border: 2px solid white ;
+  background-color: #17202A;
+  color: white;
+  font-size: 10px;
+  outline: none;
 }

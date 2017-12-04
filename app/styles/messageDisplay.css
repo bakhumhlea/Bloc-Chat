@@ -4,13 +4,15 @@ section.list-message {
 div.list-group {
   display: block;
   position: fixed;
-  width: 80%;
+  width: auto;
   background-color: #091019;
   box-sizing: border-box;
   top: 30px;
   bottom: 0px;
   right: 0;
+  left: 130px;
   margin-bottom: 0;
+  border-left: 1px solid #070a0e;
   font-size: 0.6em;
 }
 div.list-group .list-group-item {
@@ -24,6 +26,7 @@ div.list-group .message-detail {
 div.list-group h5 {
   margin: 0 0 4px 0;
   font-size: 1.2em;
+  font-weight: bolder;
 }
 div.list-group p {
   display: inline;

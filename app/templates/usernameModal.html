@@ -1,0 +1,21 @@
+<div class="modal-login">
+    <form name="newRoomForm">
+      <div class="modal-header">
+          <h3 class="modal-title" id="modal-title">Enter Your <span class="logo">Bloc Chat</span>Username</h3>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <h5>Username</h5>
+        <input type="text" class="form-control" ng-model="user.userProfile.username" placeholder="Your Bloc Name"/>
+        <h5>First Name</h5>
+        <input type="text" class="form-control" ng-model="user.userProfile.first" placeholder="Your First Name"/>
+        <h5>Last Name</h5>
+        <input type="text" class="form-control" ng-model="user.userProfile.last" placeholder="Your Last Name"/>
+        <h5>Avartar URL</h5>
+        <input type="text" class="form-control" ng-model="user.userProfile.avartar" placeholder="Url Here! (or Just leave it blank)"/>
+      </div>
+      <p class="required-info" ng-show="user.required()"><i>Required Username, First Name and Last Name</i></p>
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="user.ok(user.userProfile.username,user.userProfile.first,user.userProfile.last,user.userProfile.avartar)">Log In</button>
+      </div>
+    </form>
+</div>

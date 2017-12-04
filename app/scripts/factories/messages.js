@@ -3,11 +3,8 @@
     var messages = {};
     var messageRef = firebase.database().ref().child("messageLists");
     var messageListArr = $firebaseArray(messageRef);
-
-    messages.roomId
+    
     messages.list = null;
-
-    var roomIdList = messageRef.orderByChild('roomId').equalTo('-L-9-yvce5lIgjFcjZgx');
 
     messages.openChatRoom = function(room) {
       var thisRoomId = room.$id;
