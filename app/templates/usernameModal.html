@@ -5,17 +5,24 @@
       </div>
       <div class="modal-body" id="modal-body">
         <h5>Username</h5>
-        <input type="text" class="form-control" ng-model="user.userProfile.username" placeholder="Your Bloc Name"/>
+        <input type="text" class="form-control" ng-model="user.userProfile.username" placeholder="Create Your Bloc Name"/>
         <h5>First Name</h5>
-        <input type="text" class="form-control" ng-model="user.userProfile.first" placeholder="Your First Name"/>
+        <input type="text" class="form-control" ng-model="user.userProfile.first" placeholder="Enter Your First Name"/>
         <h5>Last Name</h5>
-        <input type="text" class="form-control" ng-model="user.userProfile.last" placeholder="Your Last Name"/>
+        <input type="text" class="form-control" ng-model="user.userProfile.last" placeholder="Enter Your Last Name"/>
         <h5>Avartar URL</h5>
-        <input type="text" class="form-control" ng-model="user.userProfile.avartar" placeholder="Url Here! (or Just leave it blank)"/>
+        <input type="text" class="form-control" ng-model="user.userProfile.avartar" placeholder="Enter Url Here! (or Just leave it blank)"/>
       </div>
       <p class="required-info" ng-show="user.required()"><i>Required Username, First Name and Last Name</i></p>
       <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="user.ok(user.userProfile.username,user.userProfile.first,user.userProfile.last,user.userProfile.avartar)">Log In</button>
+        <button class="btn btn-primary" type="button" ng-click="user.ok(user.userProfile.username,user.userProfile.first,user.userProfile.last,user.userProfile.avartar)">Create User</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <h4>Bloc User Log In Here!</h4>
+        <input type="text" class="form-control" ng-model="user.userProfile.loginName" placeholder="Your Bloc Name"/>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-login" type="button" ng-click="user.LogIn(user.userProfile.loginName)">Log In</button>
       </div>
     </form>
 </div>

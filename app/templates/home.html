@@ -27,10 +27,10 @@
   </div>
   <div class="nav-catagories">
     <h2>Chat Room</h2>
-    <button type="button" class="chat-btn" title="New Chat Room" ng-click="home.open('sm')"><span class="ion-android-chat"></span></button>
     <div class="list-group-item list-group-item-action" ng-repeat="room in home.rooms.list" ng-click="home.messages.openChatRoom(room)" title="{{room.$value}}">
       {{room.$value}}
     </div>
+    <button type="button" class="chat-btn" title="New Chat Room" ng-click="home.open('sm')"><span class="ion-android-chat"></span></button>
   </div>
 </section>
 <section class="user-config">
@@ -40,3 +40,12 @@
 </section>
 
 <message-list>No Chat Data :(</message-list>
+
+<section class="sent-message">
+  <div class="message-box">
+    <input type="text" class="text-message" ng-model="home.messages.text" placeholder="Say Hi to The World !"/>
+    <button class="send-btn" ng-click="home.messages.send(home.messages.text)">
+      Send
+    </button>
+  </div>
+</section>

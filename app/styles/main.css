@@ -55,69 +55,71 @@ section.list-chat-room {
   bottom: 0;
 }
 section.list-chat-room div.nav-catagories {
-  background-color: #172020;
+  background-color: #17202a;
   border-top: 1px solid #c32828;
 }
 section.list-chat-room .nav-catagories h2 {
-  display: inline-block;
+  display: block;
   position: relative;
-  width: 65%;
-  height: 20px;
-  padding-left: 1rem;
-  margin: 6px auto auto auto;
+  width: 130px;
+  height: 26px;
+  margin: 0 auto auto auto;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #4e374d;
   font-size: 1.4rem;
   font-weight: 400;
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  background-color: #172020;
 }
 section.list-chat-room .nav-catagories .user-profile {
-  height: 60px;
+  height: 100px;
   width: 100%;
   padding-top: 10px;
   background-color: #17202a;
 }
 section.list-chat-room .nav-catagories .user-profile .avartar-img {
-  display: inline-block;
-  width : 40px;
-  height: 40px;
+  width : 60px;
+  height: 60px;
   box-sizing: border-box;
   background-color: #091019;
-  margin: 0 2px 0 10px;
+  margin: 0 auto 0 auto;
   border-radius: 50%;
   border: 1px solid #c32828;
   background-size: cover;
   background-image: url(http://cdn.mysitemyway.com/etc-mysitemyway/webtreats/assets/posts/857/full/tileable-classic-nebula-space-patterns-6.jpg);
 }
 section.list-chat-room .nav-catagories .user-profile span {
-  display: inline-block;
-  float: right;
-  width: 75px;
-  height: 28px;
-  padding-top: 9px;
-  padding-right: 2px;
+  display: block;
+  width: 120px;
+  padding: 2px 0 10px 0;
+  border-top: 1px solid #c32828;
+  margin: 8px auto 0 auto;
   box-sizing: border-box;
-  font-size: 1.4rem;
+  background-color: #17202a;
+  font-size: 1rem;
+  font-weight: bolder;
   font-family: 'Oxygen', sans-serif;
+  text-align: center;
 }
 section.list-chat-room .nav-catagories .chat-btn {
   display: block;
-  float: right;
   cursor: pointer;
-  width: 20px;
-  height: 16px;
-  margin-top: 0.6rem;
-  margin-right: 0.8rem;
+  width: 40px;
+  height: 20px;
+  margin: 8px auto 5px auto;
   color: #FFC107;
-  background-color: #17202A;
+  background-color: #17202a;
   border: 1px solid #FFC107;
-  border-radius: 5px;
-  font-weight: 100px;
+  border-radius: 10px;
   font-size: 10px;
   text-align: center;
   opacity: 0.7;
   outline: none;
 }
 section.list-chat-room .nav-catagories .chat-btn .ion-android-chat {
-  left: 0;
+  font-size: 1.2rem;
 }
 section.list-chat-room .chat-btn:hover {
   -webkit-transform: scale(1.1,1.1);
@@ -128,19 +130,17 @@ section.list-chat-room .nav-catagories .list-group-item {
   display: block;
   text-transform: capitalize;
   font-weight: 400;
-  font-size: 0.8rem;
-  box-sizing: border-box;
+  font-size: 1rem;
   width: 100%;
-  height: 2.4rem;
   color: white;
   border: none;
-  background-color: #17202A;
+  margin-bottom: 2px;
+  background-color: #381635;
   white-space: nowrap;
   overflow: hidden;
+  text-align: center;
   text-overflow: ellipsis;
-
-  padding-top: 0.6rem;
-  padding-left: 1rem;
+  padding: 4px 0 5px 0;
 
   transition-timing-function: ease;
   transition-duration: 0.1s;

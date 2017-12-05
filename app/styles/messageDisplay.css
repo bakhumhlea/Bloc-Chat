@@ -37,3 +37,43 @@ div.list-group .time-stamp {
 
   font-style: italic;
 }
+
+section.sent-message {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  left: 130px;
+  height: 40px;
+  background-color: #091019;
+  border-top: 1px solid #FFC107;
+  border-left: 1px solid #070a0e;
+}
+section.sent-message .message-box {
+  background-color: #17202a;
+  height: 40px;
+  box-sizing: content-box;
+}
+section.sent-message .message-box .text-message {
+  float: left;
+  height: 24px;
+  width: 75%;
+  position: relative;
+  padding: 2px 10px 2px 10px;
+  border-radius: 12px;
+  border: 2px solid #442626;
+  margin: 9px 10px auto 10px;
+  font-size: 12px;
+  outline: none;
+}
+section.sent-message .message-box .send-btn {
+  width: 100px;
+  height: 24px;
+  margin: 8px 10px 0 0;
+  border-radius: 12px;
+  border: 2px solid #295586 ;
+  background-color: #100e05;
+  color: #ff5a5a;
+  font-size: 12px;
+  font-weight: bolder;
+  outline: none;
+}
