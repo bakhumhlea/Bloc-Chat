@@ -43,6 +43,9 @@
         $ctrl.userProfile.first = null;
         $ctrl.userProfile.last = null;
         $ctrl.userProfile.avartar = null;
+        $ctrl.messages.list = null;
+        $ctrl.messages.roomname = 'Chat Room';
+        $ctrl.rooms.list = null;
       };
     };
 

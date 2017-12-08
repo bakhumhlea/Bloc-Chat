@@ -3,10 +3,8 @@
     var Room = {};
     var ref = firebase.database().ref().child("rooms");
     var rooms = $firebaseArray(ref);
-    console.log(rooms);
-
-    Room.list = rooms;
-    console.log(rooms);
+    Room.loaded = rooms;
+    Room.list = null;
     Room.add = function(room) {
       rooms.$add(room).then(function(data){
         console.log(room);

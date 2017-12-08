@@ -7,15 +7,36 @@
 
     messages.list = null;
     messages.currentChatRoom = null;
+    messages.roomname = 'Chat Room';
 
     messages.openChatRoom = function(room) {
-      var thisRoomId = room.$id;
+      var thisRoomId = null;
       var thisRoomMessagesDisplay = null;
-      var thisRoomMessages = messageRef.orderByChild('roomId').equalTo(thisRoomId).on('value', function(snapshot) {
-        thisRoomMessagesDisplay = snapshot.val();
-        messages.list = thisRoomMessagesDisplay;
-        messages.currentChatRoom = room.$id;
-      });
+      if (!room) {
+        var roomList = null;
+        var defaultRoomId = firebase.database().ref().child("rooms").once('value', function(snapshot) {
+          console.log(snapshot.val());
+          roomList = snapshot.val();
+          var a = Object.keys(roomList);
+          var v = Object.values(roomList);
+          console.log(a[0]);
+          thisRoomId = a[0];
+          messages.currentChatRoom = thisRoomId;
+          messages.roomname = v[0];
+          var thisRoomMessages = messageRef.orderByChild('roomId').equalTo(thisRoomId).on('value', function(snapshot) {
+            thisRoomMessagesDisplay = snapshot.val();
+            messages.list = thisRoomMessagesDisplay;
+          });
+        });
+      } else {
+        thisRoomId = room.$id;
+        var thisRoomMessages = messageRef.orderByChild('roomId').equalTo(thisRoomId).on('value', function(snapshot) {
+          thisRoomMessagesDisplay = snapshot.val();
+          messages.list = thisRoomMessagesDisplay;
+          messages.currentChatRoom = thisRoomId;
+          messages.roomname = room.$value;
+        });
+      }
     };
 
     messages.text = null;

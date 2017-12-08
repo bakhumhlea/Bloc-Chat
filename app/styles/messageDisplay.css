@@ -1,9 +1,25 @@
-section.list-message {
-  background-color: #091019;
+div.room-name {
+  display: inline;
+  top: 0px;
+  left: 130px;
+  right: 0px;
+  width: auto;
+  position: fixed;
+}
+div.room-name h3 {
+  color: #fd2121;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  box-sizing: border-box;
+  width: 300px;
+  height: 30px;
+  padding-top: 8px;
+  margin: 0 auto 0 auto;
+  text-align: center;
 }
 div.list-group {
   display: block;
-  position: fixed;
+  position: absolute;
   width: auto;
   background-color: #091019;
   box-sizing: border-box;

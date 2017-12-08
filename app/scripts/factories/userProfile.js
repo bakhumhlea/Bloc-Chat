@@ -43,27 +43,6 @@
       });
       return currentUserInfo;
     };
-    console.log(user.currentUserName());
-
-    user.loginName = null;
-    user.userData = null;
-    user.findinDatabase = function(username) {
-      var checkingVal;
-      var checking = BlocChatUser.orderByChild('username').equalTo(username).on('value',function(data) {
-        console.log(data.val());
-        if (data.val()!==null) {
-          user.userData = data.val();
-          checkingVal = true;
-        } else {
-          checkingVal = false;
-        }
-      });
-      console.log(checkingVal);
-      return checkingVal;
-    };
-    user.loadData = function(object) {
-      
-    };
 
     return user;
   }
