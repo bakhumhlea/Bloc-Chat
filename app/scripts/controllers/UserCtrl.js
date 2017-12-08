@@ -3,6 +3,7 @@
     var $ctrl = this;
     $ctrl.userProfile = userProfile;
     $ctrl.messages = messages;
+    $ctrl.rooms = Room;
 
     $ctrl.valid = true;
     $ctrl.required = function() {
